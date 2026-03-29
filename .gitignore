@@ -1,0 +1,31 @@
+# Binaries
+lattice-cost
+lattice-cost.exe
+*.exe
+*.out
+
+# Build
+dist/
+bin/
+
+# Go
+vendor/
+go.sum
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test
+*.test
+coverage.out
+coverage.html
+
+# Config with secrets
+.env
+.env.local

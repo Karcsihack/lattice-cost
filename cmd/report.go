@@ -87,7 +87,8 @@ func runModels(_ *cobra.Command, _ []string) error {
 	cyan := color.New(color.FgCyan)
 	green := color.New(color.FgGreen)
 
-	bold.Println("\n  Lattice-Cost — Supported Models & Pricing (per 1M tokens)\n")
+	bold.Println("\n  Lattice-Cost — Supported Models & Pricing (per 1M tokens)")
+	fmt.Println()
 	bold.Printf("  %-45s %12s %13s\n", "Model", "Input USD", "Output USD")
 	fmt.Println("  " + fmt.Sprintf("%s", "─────────────────────────────────────────────────────────────────────────"))
 
@@ -147,7 +148,8 @@ func runRoute(_ *cobra.Command, args []string) error {
 	fullCost := router.EstimateCost(cfg.Models.PowerfulModel, tokenEst, estOutput)
 	savings := fullCost - estCost
 
-	bold.Println("\n  Lattice-Cost — Route Preview\n")
+	bold.Println("\n  Lattice-Cost — Route Preview")
+	fmt.Println()
 	fmt.Printf("  Prompt length    : %d chars (~%d tokens)\n", len(promptText), tokenEst)
 	fmt.Printf("  Complexity       : ")
 	switch complexityLabel {
